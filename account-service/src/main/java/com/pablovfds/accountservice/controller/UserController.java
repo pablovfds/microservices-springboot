@@ -4,6 +4,8 @@ import com.pablovfds.accountservice.dto.UserDTO;
 import com.pablovfds.accountservice.model.User;
 import com.pablovfds.accountservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping(path = "/users")
+@RequestMapping("/users")
 public class UserController {
 
     @Autowired
@@ -27,6 +29,11 @@ public class UserController {
         return ResponseEntity.ok(this.userService.update(userDTO));
     }
 
+    @GetMapping("")
+    public ResponseEntity<Page<User>> findAll(Pageable pageable) {
+        return ResponseEntity.ok(this.userService.findAll(pageable));
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<User> findById(@PathVariable String id) {
         return ResponseEntity.ok(this.userService.findById(id));
@@ -37,5 +44,4 @@ public class UserController {
         this.userService.remove(id);
         return ResponseEntity.ok().build();
     }
-
 }

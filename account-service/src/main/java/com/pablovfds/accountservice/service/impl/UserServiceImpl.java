@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findById(String id) {
-        return null;
+        return new User("Test", "teste@localhost", "123");
     }
 
     @Override
