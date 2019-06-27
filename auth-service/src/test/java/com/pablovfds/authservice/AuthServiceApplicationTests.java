@@ -1,4 +1,4 @@
-package com.pablovfds.accountservice;
+package com.pablovfds.authservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

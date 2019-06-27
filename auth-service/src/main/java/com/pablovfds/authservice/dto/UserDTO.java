@@ -1,4 +1,4 @@
-package com.pablovfds.accountservice.dto;
+package com.pablovfds.authservice.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

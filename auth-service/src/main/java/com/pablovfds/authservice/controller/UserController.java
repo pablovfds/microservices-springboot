@@ -1,8 +1,8 @@
-package com.pablovfds.accountservice.controller;
+package com.pablovfds.authservice.controller;
 
-import com.pablovfds.accountservice.dto.UserDTO;
-import com.pablovfds.accountservice.model.User;
-import com.pablovfds.accountservice.service.UserService;
+import com.pablovfds.authservice.dto.UserDTO;
+import com.pablovfds.authservice.model.User;
+import com.pablovfds.authservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

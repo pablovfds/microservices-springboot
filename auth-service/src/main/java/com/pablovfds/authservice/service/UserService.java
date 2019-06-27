@@ -1,7 +1,7 @@
-package com.pablovfds.accountservice.service;
+package com.pablovfds.authservice.service;
 
-import com.pablovfds.accountservice.dto.UserDTO;
-import com.pablovfds.accountservice.model.User;
+import com.pablovfds.authservice.dto.UserDTO;
+import com.pablovfds.authservice.model.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -12,4 +12,5 @@ public interface UserService {
     void remove(String id);
     User findById(String id);
     Page<User> findAll(Pageable pageable);
+    User findByEmail(String email);
 }
